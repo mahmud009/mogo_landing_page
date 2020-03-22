@@ -10,6 +10,7 @@ $color-yellow: #fce38a;
 $font-primary: #333333;
 $font-secondary: #999999;
 $border-color: #e5e5e5;
+$bg-light: #f8f8f8;
 
 //Sass Mixins
 @mixin mobile {
@@ -506,4 +507,90 @@ li {
       overflow-y: scroll;
     }
   }
+}
+
+//Quotes and testimonial section
+
+.qts-sec,
+.testimoni-sec {
+  background-color: $bg-light;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  .container {
+    position: relative;
+  }
+
+  .slick-cs-prev,
+  .slick-cs-next,
+  .slick-cs2-prev,
+  .slick-cs2-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: $font-secondary;
+    font-size: 22px;
+    z-index: 999;
+  }
+  .slick-cs-next,
+  .slick-cs2-next {
+    right: 0;
+  }
+}
+
+.qts-wrap,
+.testimoni-wrap {
+  position: relative;
+}
+
+.qts-icn,
+.testimoni-icn {
+  span {
+    border: 3px solid $color-green;
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+  }
+  i {
+    color: $color-green;
+    font-size: 40px;
+  }
+}
+
+.qts-cnt,
+.testimoni-cnt {
+  padding-left: 40px;
+  color: $font-secondary;
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    font-style: italic;
+  }
+
+  h6 {
+    font-weight: bold;
+    color: $font-primary;
+    font-family: "Kaushan Script", cursive;
+    padding-left: 75px;
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 45px;
+    position: relative;
+  }
+  h6:before {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: $accent-color;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.testimoni-sec {
+  background-color: $color-white;
 }
