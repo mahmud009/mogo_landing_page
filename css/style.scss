@@ -47,6 +47,18 @@ $bg-light: #f8f8f8;
   background: linear-gradient(to bottom, #f38181, #fce38a);
 }
 
+//Keyframes declaration
+@keyframes showcase-hover {
+  0% {
+    transform: translateY(400%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 //General Styling
 * {
   margin: 0;
@@ -85,6 +97,15 @@ h6,
 ul,
 li {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $font-primary !important;
 }
 
 .sec-title {
@@ -136,6 +157,24 @@ li {
 }
 
 // Navbar customize
+header {
+  transition: 0.8s ease;
+  transition-property: height, background-color;
+  height: 80px;
+}
+
+.header-scrolled {
+  background-color: $accent-color;
+  height: 60px;
+  box-shadow: 0px 0px 27px -14px rgba(0, 0, 0, 0.75);
+  z-index: 999999999;
+  .nav-link::after {
+    bottom: 0 !important;
+  }
+  .active::after {
+    bottom: 0;
+  }
+}
 .navbar {
   a {
     color: $color-white;
@@ -146,8 +185,9 @@ li {
   font-weight: 700;
   font-size: 26px;
   opacity: 0.8;
-  color: $accent-color !important;
+  color: $color-white !important;
 }
+
 .navbar .navbar-nav {
   .nav-link {
     text-transform: uppercase;
@@ -237,6 +277,7 @@ li {
     font-family: "Kaushan Script", cursive;
   }
   h1 {
+    color: $color-white !important;
     font-size: 100px;
     font-weight: 700;
     line-height: 100px;
@@ -277,8 +318,10 @@ li {
 }
 
 //Story section design
-.stry-itm-wrp {
-  .stry-singl {
+.stry-itm-wrp,
+.team-itm-wrp {
+  .stry-singl,
+  .team-singl {
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -308,7 +351,8 @@ li {
     }
   }
 
-  .stry-singl::before {
+  .stry-singl::before,
+  .team-singl::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -320,7 +364,8 @@ li {
     @include gradient-def;
   }
 
-  .stry-singl::after {
+  .stry-singl::after,
+  .team-singl::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -334,27 +379,32 @@ li {
   }
 }
 
-// .stry-itm-wrp {
-//   .stry-singl:first-child {
-//     margin-left: 0;
-//   }
-//   .stry-singl:last-child {
-//     margin-right: 0;
-//   }
-// }
-
-.stry-singl:hover {
+.stry-singl:hover,
+.team-singl:hover {
   transform: translate(-15px, -15px);
+  a {
+    li:nth-child(1) {
+      animation-name: showcase-hover;
+      animation-duration: 0.5s;
+    }
+    li:nth-child(2) {
+      animation-name: showcase-hover;
+      animation-duration: 0.7s;
+    }
+  }
 }
-.stry-singl:hover::after {
+.stry-singl:hover::after,
+.team-singl:hover::after {
   transform: translate(15px, 15px);
 }
 
-.stry-singl:hover::before {
+.stry-singl:hover::before,
+.team-singl:hover::before {
   opacity: 0.9;
 }
 
-.stry-singl:hover ul {
+.stry-singl:hover ul,
+.team-singl:hover ul {
   opacity: 1;
 }
 
@@ -593,4 +643,150 @@ li {
 
 .testimoni-sec {
   background-color: $color-white;
+}
+
+// Team section customize
+.team-title {
+  h6 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 5px;
+  }
+  p {
+    font-style: italic;
+    font-size: 14px;
+    color: $font-secondary;
+  }
+}
+
+.team-social {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    background-color: $color-yellow;
+    border-left: 1px solid lighten($accent-color, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+
+    a {
+      width: 45px;
+      height: 45px;
+      display: block;
+      font-size: 22px !important;
+      line-height: 45px;
+      color: $accent-color;
+      transition: all 0.5s ease;
+    }
+  }
+
+  li:first-child {
+    border-left: none;
+  }
+
+  li:hover {
+    background-color: $accent-color;
+    border-left: none;
+    a {
+      color: $color-white;
+    }
+  }
+}
+
+.team-social:hover {
+  li {
+    animation-name: showcase-hover;
+    animation-duration: 0.5s;
+  }
+}
+
+// Company section customize
+
+.cmp-sec {
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+//Showcase section customize
+
+.showcase-sec {
+  padding-bottom: 0;
+  .showcase-itm-wrp {
+    .col-3 {
+      padding: 0;
+    }
+  }
+}
+
+.showcase-img {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    transition: all 0.8s ease;
+  }
+}
+
+.showcase-img:hover {
+  img {
+    transform: scale(1.2);
+  }
+  .showcase-img-title {
+    opacity: 0.9;
+
+    i,
+    h6,
+    p {
+      animation-name: showcase-hover;
+    }
+
+    i {
+      animation-duration: 0.5s;
+    }
+    h6 {
+      animation-duration: 0.7s;
+    }
+    p {
+      animation-duration: 0.8s;
+    }
+  }
+}
+
+.showcase-img-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.8s ease;
+  @include gradient-def;
+
+  i {
+    font-size: 32px;
+  }
+  h6 {
+    color: $color-white !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+    font-style: italic;
+  }
 }

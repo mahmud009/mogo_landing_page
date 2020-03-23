@@ -1,4 +1,14 @@
 $(function() {
+  //header scroll class
+
+  $(window).on("scroll", function(e) {
+    if ($(window).scrollTop() > 200) {
+      $("header").addClass("header-scrolled");
+    } else {
+      $("header").removeClass("header-scrolled");
+    }
+  });
+
   //Initialize counterjs
   $(".counter").counterUp({
     delay: 10,
