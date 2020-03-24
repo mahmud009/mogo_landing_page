@@ -541,22 +541,28 @@ header {
   .acrdn-title:first-child {
     margin-top: 0;
   }
-
   .collapse {
     padding: 20px;
     border: 1px solid $border-color;
-
-    .collapse-inr {
-      padding-right: 20px;
-      font-size: 12px;
-      line-height: 22px;
-      color: $font-secondary;
-      font-style: italic;
-      height: 132px;
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
+    transition: all 0.35s ease;
   }
+
+  .collapsing {
+    border: 1px solid $border-color;
+  }
+}
+
+.collapse-inr {
+  padding-right: 20px;
+  padding-left: 10px;
+  font-size: 12px;
+  line-height: 22px;
+  color: $font-secondary;
+  font-style: italic;
+  height: 132px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: all 0.35s ease;
 }
 
 //Quotes and testimonial section
@@ -583,6 +589,14 @@ header {
     font-size: 22px;
     z-index: 999;
   }
+
+  .slick-cs-prev:focus,
+  .slick-cs-next:focus,
+  .slick-cs2-prev:focus,
+  .slick-cs2-next:focus {
+    outline: none;
+  }
+
   .slick-cs-next,
   .slick-cs2-next {
     right: 0;
@@ -639,6 +653,11 @@ header {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+.qts-single:focus,
+.testimoni-single:focus {
+  outline: none;
 }
 
 .testimoni-sec {
@@ -1057,14 +1076,18 @@ footer {
       width: 230px;
     }
 
+    input:focus {
+      outline: none;
+    }
+
     input[type="submit"] {
       background-color: $color-green;
-      padding: 13px;
+      padding: 12px;
       border: none;
       color: $color-white;
       font-size: 12px;
       font-weight: bold;
-      margin-left: -5px;
+
       transition: all 0.4s ease;
       width: 150px;
     }

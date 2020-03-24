@@ -25,4 +25,6 @@ $(function() {
     prevArrow: $(".slick-cs2-prev"),
     nextArrow: $(".slick-cs2-next")
   });
+
+  // Custom collapse
 });
