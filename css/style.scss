@@ -66,17 +66,6 @@ $bg-light: #f8f8f8;
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  background-color: $border-color;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $color-green;
-  border-radius: 20px;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -247,6 +236,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .bnr:before {
@@ -257,8 +248,15 @@ header {
   top: 0;
   left: 0;
   opacity: 0.9;
-
   @include gradient-def;
+}
+
+.bnr .slick-track,
+.slick-list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-cnt-wrap {
@@ -314,6 +312,72 @@ header {
   .btn:hover {
     background-color: $color-white;
     color: black;
+  }
+}
+
+.intro-txt-wrap:focus {
+  outline: none;
+}
+
+// Banner slide indicators
+
+.bnr .container {
+  position: relative;
+}
+
+.bnr-slide-indic-wrp {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.9;
+}
+.bnr-slide-indic {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.bnr-slide-indic .ldr-thumb {
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition-timing-function: linear;
+}
+.bnr-slide-indic .ldr-bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $color-white;
+  opacity: 0.5;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bnr-slide-indic p {
+  font-size: 18px;
+  color: $color-white;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+  span {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+.bnr-slide-indic-actv {
+  .ldr-bar {
+    opacity: 1;
+  }
+  .ldr-thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
+    border-radius: 3px;
+    transform: scaleX(1);
+  }
+  p {
+    opacity: 1;
   }
 }
 
@@ -517,10 +581,21 @@ header {
 }
 
 .wt-we-do-sec .accordion {
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: $border-color;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-green;
+    border-radius: 20px;
+  }
   .acrdn-title {
     margin-top: 10px;
-    padding: 12px;
+    padding: 12px 20px 12px 18px;
     border: 1px solid $border-color;
+    border-radius: 0;
     a {
       padding: 15px;
       font-size: 14px;
@@ -544,17 +619,13 @@ header {
   .collapse {
     padding: 20px;
     border: 1px solid $border-color;
-    transition: all 0.35s ease;
-  }
-
-  .collapsing {
-    border: 1px solid $border-color;
+    border-radius: 0;
   }
 }
 
 .collapse-inr {
   padding-right: 20px;
-  padding-left: 10px;
+  padding-left: 0px;
   font-size: 12px;
   line-height: 22px;
   color: $font-secondary;
@@ -562,7 +633,39 @@ header {
   height: 132px;
   overflow-x: hidden;
   overflow-y: scroll;
-  transition: all 0.35s ease;
+}
+
+.acrdn-title {
+  background-color: transparent;
+  a {
+    color: $font-primary;
+    position: relative;
+    transition: all 0.5s ease;
+
+    i:nth-child(2) {
+      padding: 0 !important;
+      font-size: 18px !important;
+      color: $font-secondary !important;
+      position: absolute;
+      right: 3px;
+      transform-origin: center center;
+      transition: all 0.5s ease;
+    }
+  }
+  a:hover {
+    color: lighten($font-primary, 30%);
+  }
+}
+.acrdn-title:focus {
+  outline: none;
+}
+
+.ui-accordion-header-active {
+  a {
+    i:nth-child(2) {
+      transform: rotate(180deg) !important;
+    }
+  }
 }
 
 //Quotes and testimonial section
@@ -692,7 +795,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.5s ease;
+    transition: all 0.5s ease;
 
     a {
       width: 45px;
@@ -711,7 +814,7 @@ header {
 
   li:hover {
     background-color: $accent-color;
-    border-left: none;
+    border-left-color: $accent-color;
     a {
       color: $color-white;
     }
@@ -1166,9 +1269,9 @@ footer {
 
 .ftr-copy {
   p {
-    font-size: 12px;
+    font-size: 14px;
     color: $font-primary;
-    font-weight: 700;
+    font-weight: 500;
     padding-top: 20px;
     padding-bottom: 20px;
   }

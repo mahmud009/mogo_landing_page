@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!--External stylesheet and others-->
 
 
@@ -65,17 +67,72 @@
 
     <!--Banner section-->
     <section class="bnr text-center">
-        <div class="container">
-            <div class="intro-cnt-wrap row">
-                <div class="intro-txt-wrap row align-items-center justify-content-center">
-                    <div class="col-8">
-                        <p>Creative Template</p>
-                        <h1 id="pinned-element1">Welcome to MoGo</h1>
-                        <a href="#" class="btn">Learn more</a>
-                    </div>
+        <div class="intro-cnt-wrap">
+            <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
+                <div class="col-8">
+                    <p>Creative Template</p>
+                    <h1 id="pinned-element1">Welcome to MoGo</h1>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+
+            <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
+                <div class="col-8">
+                    <p>We Work for</p>
+                    <h1 id="pinned-element1">Creative projects</h1>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+
+            <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
+                <div class="col-8">
+                    <p>We are the best for</p>
+                    <h1 id="pinned-element1">professional work</h1>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+
+            <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
+                <div class="col-8">
+                    <p>Connecting with us is</p>
+                    <h1 id="pinned-element1">Surprisingly Easy</h1>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="bnr-slide-indic-wrp row text-left">
+                <div class="bnr-slide-indic col-3">
+                    <span class="ldr-bar">
+                        <span class="ldr-thumb"></span>
+                    </span>
+                    <p><span>01</span> Intro</p>
+                </div>
+
+                <div class="bnr-slide-indic col-3">
+                    <span class="ldr-bar">
+                        <span class="ldr-thumb"></span>
+                    </span>
+                    <p><span>02</span> Work</p>
+                </div>
+
+                <div class="bnr-slide-indic col-3">
+                    <span class="ldr-bar">
+                        <span class="ldr-thumb"></span>
+                    </span>
+                    <p><span>03</span> About</p>
+                </div>
+
+                <div class="bnr-slide-indic col-3">
+                    <span class="ldr-bar">
+                        <span class="ldr-thumb"></span>
+                    </span>
+                    <p><span>04</span> Contact</p>
+                </div>
+            </div>
+        </div>
+
     </section>
     <!--Banner section-->
 
@@ -327,19 +384,16 @@
 
                         <div class="col-6 text-left">
                             <div class="accordion" id="accordion1">
-                                <div class="acrdn-title" id="headingOne">
-                                    <a class="btn btn-link d-flex align-items-center" type="button"
-                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
+                                <div class="acrdn-title">
+                                    <a class="btn btn-link d-flex align-items-center" type="button">
                                         <i class="fas fa-camera-retro"></i>
                                         Photography
+                                        <i class="fas fa-chevron-down"></i>
                                     </a>
                                 </div>
 
-                                <!-- <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordion1"> -->
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordion1">
+
+                                <div class="collapse">
                                     <div class="collapse-inr">
                                         <p>
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
@@ -356,17 +410,15 @@
                                 </div>
 
 
-                                <div class="acrdn-title" id="headingTwo">
-                                    <a class="btn btn-link d-flex align-items-center" type="button"
-                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-                                        aria-controls="collapseTwo">
+                                <div class="acrdn-title">
+                                    <a class="btn btn-link d-flex align-items-center" type="button">
                                         <i class="fas fa-sliders-h"></i>
                                         creativity
+                                        <i class="fas fa-chevron-down"></i>
                                     </a>
                                 </div>
 
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordion1">
+                                <div class="collapse">
                                     <div class="collapse-inr">
                                         <p>
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
@@ -383,17 +435,15 @@
                                 </div>
 
 
-                                <div class="acrdn-title" id="headingThree">
-                                    <a class="btn btn-link d-flex align-items-center" type="button"
-                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-                                        aria-controls="collapseThree">
+                                <div class="acrdn-title">
+                                    <a class="btn btn-link d-flex align-items-center" type="button">
                                         <i class="fab fa-gg-circle"></i>
                                         web design
+                                        <i class="fas fa-chevron-down"></i>
                                     </a>
                                 </div>
 
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordion1">
+                                <div class="collapse">
                                     <div class="collapse-inr">
                                         <p>
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
@@ -472,8 +522,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 sec-title">
-                    <p>What we do</p>
-                    <h1>Story about us</h1>
+                    <p>Who we are</p>
+                    <h1>Meet our team</h1>
                 </div>
                 <div class="team-cnt sec-inr-padding col-12">
                     <div class="sec-inr-txt col-12">
@@ -1001,6 +1051,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--Testimonial Scripts-->
 
 
