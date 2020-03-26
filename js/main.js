@@ -38,7 +38,7 @@ $(function() {
     arrows: false,
     infinite: true,
     speed: 800,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: slideDuration,
     pauseOnFocus: false,
     pauseOnHover: false
