@@ -30,15 +30,21 @@
 
 
 <body>
-
-
     <!--Header section-->
     <header class="fixed-top d-flex align-items-center">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">MoGo</a>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav ml-auto">
+                <div class="nav-toggler">
+                    <div class="nv-tg-icn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Menu</p>
+                </div>
+                <div class="navbar-cs-collapse ml-auto">
+                    <ul class="navbar-nav ml-auto text-center">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">about</a>
                         </li>
@@ -54,12 +60,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">contact</a>
                         </li>
-                        <li class="nav-icons nav">
+                        <li class="nav-icons nav m-auto">
                             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
                             <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
                         </li>
                     </ul>
                 </div>
+
             </nav>
         </div>
     </header>
@@ -69,7 +76,7 @@
     <section class="bnr text-center">
         <div class="intro-cnt-wrap">
             <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
-                <div class="col-8">
+                <div class="col-sm-8 col-md-8 col-lg-6">
                     <p>Creative Template</p>
                     <h1 id="pinned-element1">Welcome to MoGo</h1>
                     <a href="#" class="btn">Learn more</a>
@@ -77,7 +84,7 @@
             </div>
 
             <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
-                <div class="col-8">
+                <div class="col-sm-8 col-md-8 col-lg-6">
                     <p>We Work for</p>
                     <h1 id="pinned-element1">Creative projects</h1>
                     <a href="#" class="btn">Learn more</a>
@@ -85,7 +92,7 @@
             </div>
 
             <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
-                <div class="col-8">
+                <div class="col-sm-8 col-md-8 col-lg-6">
                     <p>We are the best for</p>
                     <h1 id="pinned-element1">professional work</h1>
                     <a href="#" class="btn">Learn more</a>
@@ -93,7 +100,7 @@
             </div>
 
             <div class="intro-txt-wrap d-flex align-items-center justify-content-center">
-                <div class="col-8">
+                <div class="col-sm-8 col-md-8 col-lg-6">
                     <p>Connecting with us is</p>
                     <h1 id="pinned-element1">Surprisingly Easy</h1>
                     <a href="#" class="btn">Learn more</a>
@@ -153,8 +160,8 @@
                             laboris nisi ut aliquip ex ea commodo consequat. </p>
                     </div>
 
-                    <div class="stry-itm-wrp d-flex justify-content-center">
-                        <div class="stry-singl-wrp col-4">
+                    <div class="stry-itm-wrp d-flex justify-content-center align-items-center flex-column flex-md-row">
+                        <div class="stry-singl-wrp d-flex justify-content-center col-12 col-md-4 mb-4 mb-md-0">
                             <div class="stry-singl">
                                 <img src="images/story_1.png" alt="story1" class="img-fluid">
                                 <a href="#">
@@ -166,7 +173,7 @@
                             </div>
                         </div>
 
-                        <div class="stry-singl-wrp col-4">
+                        <div class="stry-singl-wrp d-flex justify-content-center col-12 col-md-4 mb-4 mb-md-0">
                             <div class="stry-singl">
                                 <img src="images/story_2.png" alt="story1" class="img-fluid">
                                 <a href="#">
@@ -178,7 +185,7 @@
                             </div>
                         </div>
 
-                        <div class="stry-singl-wrp col-4">
+                        <div class="stry-singl-wrp d-flex justify-content-center col-12 col-md-4 mb-0 mb-md-0">
                             <div class="stry-singl">
                                 <img src="images/story_3.png" alt="story1" class="img-fluid">
                                 <a href="#">
@@ -201,7 +208,7 @@
     <section class="cnter-sec text-center">
         <div class="container">
             <div class="col">
-                <div class="row pl-3 pr-3">
+                <div class="row d-flex justify-content-center align-items-center pl-3 pr-3">
                     <ul>
                         <li class="cnter-num counter">41</li>
                         <li class="cnter-title">WEB DESIGN PROJECTS</li>
@@ -1046,17 +1053,19 @@
 
     <!--External Scripts-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <!--Testimonial Scripts-->
 
 
     <!--Local scripts-->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/stickyjs/jquery.sticky.js"></script>
     <script src="plugins/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
     <!--Local scripts-->

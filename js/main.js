@@ -1,11 +1,17 @@
 $(function() {
   //header scroll class
   $(window).on("scroll", function(e) {
-    if ($(window).scrollTop() > 200) {
+    if ($(window).scrollTop() > 5) {
       $("header").addClass("header-scrolled");
     } else {
       $("header").removeClass("header-scrolled");
     }
+  });
+
+  // Responsive navigation design
+
+  $(".nav-toggler").on("click", function() {
+    $("header").toggleClass("nav-opened");
   });
 
   // Banner section Slick js initialize
@@ -32,10 +38,11 @@ $(function() {
     arrows: false,
     infinite: true,
     speed: 800,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: slideDuration,
     pauseOnFocus: false,
     pauseOnHover: false
+
     // dots: true,
     // appendDots: $(".bnr-slide-indic")
   });
