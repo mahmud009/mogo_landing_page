@@ -323,13 +323,16 @@
 .cnter-sec {
   background-color: $color-green;
   color: $color-white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include md {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   ul {
     list-style-type: none;
-    width: 50%;
-    padding-top: 30px;
     padding-bottom: 0px;
-    border: none;
 
     @include md {
       width: 20%;
@@ -341,8 +344,6 @@
 
     @include lg {
       width: 20%;
-      border-left: 1px solid
-        rgba(red($color-white), green($color-white), blue($color-white), 0.3);
       padding-top: 50px;
       padding-bottom: 60px;
     }
@@ -357,6 +358,10 @@
 
     .cnter-title {
       font-size: 10px;
+      margin-left: 15px;
+      @include md {
+        margin-left: 0;
+      }
       @include lg {
         font-size: 14px;
       }
@@ -364,11 +369,13 @@
   }
   ul:last-child {
     border-right: none;
-    padding-bottom: 30px;
 
-    @include lg {
+    @include md {
+      padding-bottom: 40px;
       border-right: 1px solid
         rgba(red($color-white), green($color-white), blue($color-white), 0.3);
+    }
+    @include lg {
       padding-bottom: 60px;
     }
   }
