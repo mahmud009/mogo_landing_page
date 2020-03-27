@@ -1153,9 +1153,9 @@ footer {
   .ftr-scl-link {
     li {
       a {
-        font-size: 18px;
-        line-height: 18px;
-        margin-left: 12px;
+        font-size: 14px;
+        line-height: 14px;
+        margin-left: 8px;
         text-decoration: none;
         color: $color-green;
         transition: all 0.4s ease;
@@ -1184,14 +1184,19 @@ footer {
 
     li:first-child {
       margin-left: 0;
-      margin-right: 20px;
-      font-size: 16px;
+      margin-right: 10px;
+      font-size: 12px;
       font-style: italic;
       color: $font-secondary;
       @include md {
         font-size: 10px;
         line-height: 10px;
         margin-right: 5px;
+      }
+
+      @include lg {
+        margin-right: 20px;
+        font-size: 16px;
       }
     }
   }
@@ -1221,7 +1226,7 @@ footer {
       padding: 10px;
       color: $font-secondary !important;
       font-style: italic;
-      font-size: 14px;
+      font-size: 12px;
       width: 70%;
       height: 100%;
 
@@ -1243,8 +1248,8 @@ footer {
       padding: 12px;
       border: none;
       color: $color-white;
-      font-size: 12px;
-      font-weight: bold;
+      font-size: 10px;
+      font-weight: normal;
       transition: all 0.4s ease;
       width: 30%;
       height: 100%;

@@ -1726,9 +1726,9 @@ footer {
 }
 
 .ftr-cnt .ftr-scl-link li a {
-  font-size: 18px;
-  line-height: 18px;
-  margin-left: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 8px;
   text-decoration: none;
   color: #95e1d3;
   -webkit-transition: all 0.4s ease;
@@ -1765,8 +1765,8 @@ footer {
 
 .ftr-cnt .ftr-scl-link li:first-child {
   margin-left: 0;
-  margin-right: 20px;
-  font-size: 16px;
+  margin-right: 10px;
+  font-size: 12px;
   font-style: italic;
   color: #999999;
 }
@@ -1776,6 +1776,13 @@ footer {
     font-size: 10px;
     line-height: 10px;
     margin-right: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ftr-cnt .ftr-scl-link li:first-child {
+    margin-right: 20px;
+    font-size: 16px;
   }
 }
 
@@ -1820,7 +1827,7 @@ footer {
   padding: 10px;
   color: #999999 !important;
   font-style: italic;
-  font-size: 14px;
+  font-size: 12px;
   width: 70%;
   height: 100%;
 }
@@ -1846,8 +1853,8 @@ footer {
   padding: 12px;
   border: none;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 10px;
+  font-weight: normal;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   width: 30%;
