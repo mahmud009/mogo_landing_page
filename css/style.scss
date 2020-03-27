@@ -734,6 +734,17 @@
       color: $accent-color;
       transition: all 0.5s ease;
     }
+
+    @include md {
+      width: 30px;
+      height: 30px;
+      font-size: 16px !important;
+    }
+    @include lg {
+      width: 45px;
+      height: 45px;
+      font-size: 22px !important;
+    }
   }
 
   li:first-child {
@@ -769,7 +780,9 @@
 .showcase-sec {
   padding-bottom: 0;
   .showcase-itm-wrp {
-    .col-3 {
+    .col-3,
+    .col-6,
+    .col-12 {
       padding: 0;
     }
   }
@@ -780,6 +793,8 @@
   overflow: hidden;
 
   img {
+    width: 100%;
+    height: auto;
     transition: all 0.8s ease;
   }
 }
@@ -825,19 +840,29 @@
   @include gradient-def;
 
   i {
-    font-size: 32px;
+    font-size: 26px;
+
+    @include lg {
+      font-size: 32px;
+    }
   }
   h6 {
     color: $color-white !important;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+
+    @include lg {
+      font-size: 14px;
+    }
   }
   p {
-    font-size: 14px;
-    font-style: italic;
+    font-size: 10px;
+    @include lg {
+      font-size: 14px;
+    }
   }
 }
 
@@ -872,7 +897,11 @@
 }
 
 .wps-singl-wrp {
-  margin-bottom: 70px;
+  margin-bottom: 25px;
+
+  @include md {
+    margin-bottom: 70px;
+  }
   .wps-sin-txt {
     padding-left: 30px;
   }
@@ -922,12 +951,30 @@
     bottom: 10px;
     left: -10px;
 
+    @include md {
+      padding: 5px;
+    }
+
+    @include lg {
+      padding: 8px;
+    }
+
     li:nth-child(1) {
       font-size: 28px;
       line-height: 32px;
       font-weight: 700;
       color: $color-white;
       font-family: "Roboto", sans-serif;
+
+      @include md {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      @include lg {
+        font-size: 28px;
+        line-height: 32px;
+      }
     }
     li:nth-child(2) {
       color: $color-white;
@@ -935,6 +982,16 @@
       font-size: 14px;
       line-height: 18px;
       font-family: "Roboto", sans-serif;
+
+      @include md {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      @include lg {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }
@@ -1057,6 +1114,17 @@ footer {
     line-height: 22px;
     margin-bottom: 40px;
     margin-top: 20px;
+    @include md {
+      font-size: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    @include lg {
+      font-size: 12px;
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
   }
 
   .lk-count {
@@ -1072,13 +1140,46 @@ footer {
   .divider {
     margin-top: 12px;
     margin-bottom: 12px;
+    @include md {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    @include lg {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
   }
 
   .ftr-scl-link {
     li {
-      color: $color-green;
-      font-size: 18px;
-      margin-left: 12px;
+      a {
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 12px;
+        text-decoration: none;
+        color: $color-green;
+        transition: all 0.4s ease;
+
+        @include md {
+          font-size: 12px;
+          line-height: 12px;
+          margin-left: 5px;
+        }
+        @include lg {
+          font-size: 14px;
+          line-height: 14px;
+          margin-left: 8px;
+        }
+        @include xl {
+          font-size: 18px;
+          line-height: 18px;
+          margin-left: 12px;
+        }
+      }
+
+      a:hover {
+        color: darken($color-green, 30%);
+      }
     }
 
     li:first-child {
@@ -1087,6 +1188,11 @@ footer {
       font-size: 16px;
       font-style: italic;
       color: $font-secondary;
+      @include md {
+        font-size: 10px;
+        line-height: 10px;
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -1097,6 +1203,18 @@ footer {
 .ftr-cnt {
   .ftr-form {
     margin-top: 30px;
+    width: 100%;
+    height: 43px;
+    overflow: hidden;
+
+    @include md {
+      height: 30px;
+    }
+
+    @include lg {
+      height: 43px;
+    }
+
     input[type="email"] {
       background-color: $color-white;
       border: 1px solid $border-color;
@@ -1104,7 +1222,16 @@ footer {
       color: $font-secondary !important;
       font-style: italic;
       font-size: 14px;
-      width: 230px;
+      width: 70%;
+      height: 100%;
+
+      @include md {
+        font-size: 11px;
+      }
+
+      @include lg {
+        font-size: 14px;
+      }
     }
 
     input:focus {
@@ -1118,9 +1245,21 @@ footer {
       color: $color-white;
       font-size: 12px;
       font-weight: bold;
-
       transition: all 0.4s ease;
-      width: 150px;
+      width: 30%;
+      height: 100%;
+
+      @include md {
+        font-size: 10px;
+        line-height: 8px;
+        font-weight: normal;
+      }
+
+      @include lg {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 600;
+      }
     }
 
     input[type="submit"]:hover {
@@ -1151,12 +1290,27 @@ footer {
       font-weight: 700;
       color: $font-primary !important;
       text-transform: uppercase;
+
+      @include md {
+        font-size: 8px;
+      }
+
+      @include lg {
+        font-size: 11px;
+      }
     }
     p {
       color: $font-secondary !important;
-      font-size: 14px;
+      font-size: 12px;
       font-style: italic;
       margin-top: 6px;
+      @include md {
+        font-size: 10px;
+      }
+
+      @include lg {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -1188,6 +1342,16 @@ footer {
     margin-top: 35px;
     text-decoration: none;
     transition: all 0.5s ease;
+
+    @include md {
+      font-size: 10px;
+      margin-top: 15px;
+    }
+
+    @include lg {
+      font-size: 14px;
+      margin-top: 35px;
+    }
   }
 
   .insta-link:hover {
