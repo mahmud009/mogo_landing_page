@@ -917,8 +917,13 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 800px;
   overflow: visible;
+}
+
+@media (min-width: 1200px) {
+  .design-con-sec {
+    height: 800px;
+  }
 }
 
 .design-con-sec .sec-title {
@@ -1009,9 +1014,27 @@ header {
   line-height: 22px;
   color: #999999;
   font-style: italic;
-  height: 132px;
   overflow-x: hidden;
   overflow-y: scroll;
+  max-height: 132px;
+}
+
+@media (min-width: 768px) {
+  .collapse-inr {
+    max-height: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .collapse-inr {
+    max-height: 72px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .collapse-inr {
+    max-height: 132px;
+  }
 }
 
 .acrdn-title {
@@ -1097,6 +1120,8 @@ header {
 .testimoni-sec .slick-cs-next,
 .testimoni-sec .slick-cs2-next {
   right: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
 }
 
 .qts-wrap,
@@ -1107,28 +1132,50 @@ header {
 .qts-icn span,
 .testimoni-icn span {
   border: 3px solid #95e1d3;
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .qts-icn span,
+  .testimoni-icn span {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .qts-icn i,
 .testimoni-icn i {
   color: #95e1d3;
-  font-size: 40px;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .qts-icn i,
+  .testimoni-icn i {
+    font-size: 40px;
+  }
 }
 
 .qts-cnt,
 .testimoni-cnt {
-  padding-left: 40px;
   color: #999999;
 }
 
 .qts-cnt p,
 .testimoni-cnt p {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 32px;
   font-style: italic;
+}
+
+@media (min-width: 992px) {
+  .qts-cnt p,
+  .testimoni-cnt p {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 .qts-cnt h6,
@@ -1136,7 +1183,6 @@ header {
   font-weight: bold;
   color: #333333;
   font-family: "Kaushan Script", cursive;
-  padding-left: 75px;
   font-size: 20px;
   margin-top: 5px;
   line-height: 45px;
@@ -1149,11 +1195,12 @@ header {
   width: 60px;
   height: 3px;
   background-color: #f38181;
-  position: absolute;
-  left: 0;
+  display: inline-block;
+  margin-right: 12px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border-radius: 3px;
 }
 
 .qts-single:focus,

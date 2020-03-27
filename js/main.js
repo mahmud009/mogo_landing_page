@@ -47,7 +47,6 @@ $(function() {
     // appendDots: $(".bnr-slide-indic")
   });
 
-  console.log();
   //Initialize counterjs
   $(".counter").counterUp({
     delay: 10,
@@ -68,5 +67,9 @@ $(function() {
   // Jquery UI accordion initialize
   $("#accordion1").accordion({
     icons: null
+  });
+
+  $(window).on("resize", function() {
+    $("#accordion1").accordion("refresh");
   });
 });

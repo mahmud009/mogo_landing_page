@@ -432,8 +432,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 800px;
   overflow: visible;
+
+  @include md {
+  }
+  @include lg {
+  }
+  @include xl {
+    height: 800px;
+  }
 
   .sec-title {
     z-index: 1;
@@ -526,9 +533,19 @@
   line-height: 22px;
   color: $font-secondary;
   font-style: italic;
-  height: 132px;
   overflow-x: hidden;
   overflow-y: scroll;
+  max-height: 132px;
+
+  @include md {
+    max-height: 72px;
+  }
+  @include lg {
+    max-height: 72px;
+  }
+  @include xl {
+    max-height: 132px;
+  }
 }
 
 .acrdn-title {
@@ -599,6 +616,7 @@
   .slick-cs-next,
   .slick-cs2-next {
     right: 0;
+    transform: translate(-100%, -50%);
   }
 }
 
@@ -611,32 +629,45 @@
 .testimoni-icn {
   span {
     border: 3px solid $color-green;
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
+
+    @include md {
+      width: 110px;
+      height: 110px;
+    }
   }
   i {
     color: $color-green;
-    font-size: 40px;
+    font-size: 28px;
+
+    @include md {
+      font-size: 40px;
+    }
   }
 }
 
 .qts-cnt,
 .testimoni-cnt {
-  padding-left: 40px;
   color: $font-secondary;
 
   p {
     font-size: 16px;
-    line-height: 28px;
+    line-height: 32px;
     font-style: italic;
+
+    @include lg {
+      font-size: 18px;
+      line-height: 32px;
+    }
   }
 
   h6 {
     font-weight: bold;
     color: $font-primary;
     font-family: "Kaushan Script", cursive;
-    padding-left: 75px;
+
     font-size: 20px;
     margin-top: 5px;
     line-height: 45px;
@@ -647,10 +678,11 @@
     width: 60px;
     height: 3px;
     background-color: $accent-color;
-    position: absolute;
-    left: 0;
+    display: inline-block;
+    margin-right: 12px;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 3px;
   }
 }
 
